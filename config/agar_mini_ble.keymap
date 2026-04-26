@@ -46,6 +46,11 @@
                     key-positions = <22 23>;
                     bindings = <&kp RET>;
             };
+            combo_softoff {
+                    timeout-ms = <50>;
+                    key-positions = <25 26 35 36>;
+                    bindings = <&soft_off>;
+            };
     };
 
 
@@ -119,7 +124,7 @@
         layer3 { // NUM
             bindings = <
 &trans  &kp SV_ASTRK &kp N7    &kp N8    &kp N9   &kp SV_PLUS   /**/  &kp SV_ACUTE &kp SV_CARET &kp SV_TILDE &kp SV_UMLAUT &none        &trans    &trans
-&trans  &kp SV_SLASH &kp N4    &kp N5    &kp N6   &kp SV_EQUAL  /**/  &kp SV_GRAVE &sk LSHFT    &sk LCTRL    &sk LALT      &sk LGUI     &trans    &trans
+&trans  &kp SV_SLASH &kp N4    &kp N5    &kp N6   &kp SV_EQUAL  /**/  &kp SV_GRAVE &sk LSHFT    &sk LCTRL    &sk LALT      &sk LGUI     &trans
 &trans  &kp SV_DOT   &kp N1    &kp N2    &kp N3   &kp SV_MINUS  /**/  &none        &none        &none        &none         &none        &trans
         &kp SV_COMMA &trans              &kp N0                                    &trans                    &trans       &trans
             >;
@@ -127,9 +132,9 @@
 
         layer4 { // FUN
             bindings = <
-&none   &none   &kp F7  &kp F8  &kp F9  &kp F10  /**/  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &out OUT_BLE
-&none   &none   &kp F4  &kp F5  &kp F6  &kp F11  /**/  &none        &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI      &out OUT_USB
-        &none   &kp F1  &kp F2  &kp F3  &kp F12  /**/  &sys_reset   &bootloader  &bt BT_CLR   &none        &none
+&none   &none   &kp F7  &kp F8  &kp F9  &kp F10  /**/  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &out OUT_BLE  &out OUT_USB
+&none   &none   &kp F4  &kp F5  &kp F6  &kp F11  /**/  &none        &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI      &trans
+&none   &none   &kp F1  &kp F2  &kp F3  &kp F12  /**/  &sys_reset   &bootloader  &bt BT_CLR   &none        &none
         &trans  &trans          &trans                              &trans                    &tog 3       &trans
             >;
         };
