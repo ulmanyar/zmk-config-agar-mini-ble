@@ -18,6 +18,10 @@
 #define MMV_R MOVE_RIGHT
 #define MMV_U MOVE_UP
 
+&soft_off {
+    hold-time-ms = <3000>;
+};
+
 / {
     combos {
             compatible = "zmk,combos";
@@ -45,11 +49,6 @@
                     timeout-ms = <50>;
                     key-positions = <22 23>;
                     bindings = <&kp RET>;
-            };
-            combo_softoff {
-                    timeout-ms = <50>;
-                    key-positions = <25 26 35 36>;
-                    bindings = <&soft_off>;
             };
     };
 
@@ -133,8 +132,8 @@
         layer4 { // FUN
             bindings = <
 &none   &none   &kp F7  &kp F8  &kp F9  &kp F10  /**/  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &out OUT_BLE  &out OUT_USB
-&none   &none   &kp F4  &kp F5  &kp F6  &kp F11  /**/  &none        &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI      &trans
-&none   &none   &kp F1  &kp F2  &kp F3  &kp F12  /**/  &sys_reset   &bootloader  &bt BT_CLR   &none        &none
+&none   &none   &kp F4  &kp F5  &kp F6  &kp F11  /**/  &soft_off    &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI      &trans
+&none   &none   &kp F1  &kp F2  &kp F3  &kp F12  /**/  &bootloader  &sys_reset   &bt BT_CLR   &none        &none
         &trans  &trans          &trans                              &trans                    &tog 3       &trans
             >;
         };
