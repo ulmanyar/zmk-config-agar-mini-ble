@@ -71,7 +71,7 @@
             vd_swap: vd_swapper {
                     compatible = "zmk,behavior-mod-morph";
                     #binding-cells = <0>;
-                    bindings = <&kp LG(PAGE_UP)>, <&kp LG(PAGE_DOWN)>;
+                    bindings = <&kp LG(PAGE_DOWN)>, <&kp LG(PAGE_UP)>;
                     mods = <(MOD_LSFT)>;
             };
 
@@ -140,10 +140,10 @@
 
         layer5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &mkp LCLK  &mmv MMV_U &mkp RCLK   &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &mmv MMV_L &mmv MMV_D &mmv MMV_R  &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans     &kp C_PREV &kp C_NEXT  &kp C_VOL_UP &kp C_PLAY_PAUSE
-        &trans  &trans          &trans                        &trans                &kp C_MUTE  &kp C_VOL_DN
+&trans  &trans   &trans   &trans    &trans    &trans  /**/  &trans  &mkp LCLK  &mmv MMV_U &mkp RCLK   &trans       &trans  &trans
+&trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans  /**/  &trans  &mmv MMV_L &mmv MMV_D &mmv MMV_R  &trans       &trans
+&trans  &trans   &trans   &trans    &trans    &trans  /**/  &trans  &trans     &kp C_PREV &kp C_NEXT  &kp C_VOL_UP &kp C_PLAY_PAUSE
+        &trans   &trans             &kp LSHFT                       &trans                &kp C_MUTE  &kp C_VOL_DN
             >;
         };
 
